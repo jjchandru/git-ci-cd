@@ -3,6 +3,6 @@ const app = express();
 
 app.use(express.static('src'));
 
-app.listen(3000, () => {
-    console.log("Reverting to port 3000");
+app.listen(4000, () => {
+    console.log("Changing to port 4000");
 });
