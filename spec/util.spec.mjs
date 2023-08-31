@@ -7,6 +7,6 @@ describe('first sample tests', () => {
         document.body.appendChild(element);
         displayTodayDate();
         let date = new Date().toDateString();
-        expect(element.innerText).toEqual("incorrect date");
+        expect(element.innerText).toEqual(date);
     });
 });
