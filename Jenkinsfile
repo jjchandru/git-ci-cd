@@ -21,7 +21,7 @@ pipeline {
                 bat 'copy app.js "../../app-deploy/dev"'
                 bat 'copy package.json "../../app-deploy/dev"'
                 bat 'copy package-lock.json "../../app-deploy/dev"'
-                bat 'xcopy src "../../app-deploy/dev/src"'
+                bat 'xcopy src "../../app-deploy/dev/src" /E /H /C /I'
                 bat 'copy dev.config.js "../../app-deploy/dev"'
                 dir('../../app-deploy/dev') {
                     bat """
@@ -40,7 +40,7 @@ pipeline {
                 bat 'copy app.js "../../app-deploy/test"'
                 bat 'copy package.json "../../app-deploy/test"'
                 bat 'copy package-lock.json "../../app-deploy/test"'
-                bat 'xcopy src "../../app-deploy/test/src"'
+                bat 'xcopy src "../../app-deploy/test/src" /E /H /C /I'
                 bat 'copy test.config.js "../../app-deploy/test"'
                 dir('../../app-deploy/test') {
                     bat """
@@ -59,7 +59,7 @@ pipeline {
                 bat 'copy app.js "../../app-deploy/prod"'
                 bat 'copy package.json "../../app-deploy/prod"'
                 bat 'copy package-lock.json "../../app-deploy/prod"'
-                bat 'xcopy src "../../app-deploy/prod/src"'
+                bat 'xcopy src "../../app-deploy/prod/src" /E /H /C /I'
                 bat 'copy prod.config.js "../../app-deploy/prod"'
                 dir('../../app-deploy/prod') {
                     bat """
